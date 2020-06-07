@@ -14,5 +14,8 @@
     "jsdom": "^16.2.2",
     "node-fetch": "^2.6.0",
     "puppeteer": "^3.1.0"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
   }
 }
