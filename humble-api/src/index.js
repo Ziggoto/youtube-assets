@@ -6,7 +6,10 @@ const url = 'https://www.humblebundle.com'
 const { JSDOM } = jsdom
 
 const fetchHumbleBundle = async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    executablePath: '/usr/bin/chromium-browser',
+    args: ['--disable-dev-shm-usage', '--no-sandbox', '--disable-setuid-sandbox']
+  });
   const page = await browser.newPage();
 
   await page.goto(url)
