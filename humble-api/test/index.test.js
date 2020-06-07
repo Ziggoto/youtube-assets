@@ -8,10 +8,11 @@ describe('Main application', () => {
   const parsedPage = parsePage(mockedPage)
 
   describe('fetchHumbleBundle', () => {
-    it('should return a string', async () => {
+    it('should return a string', async (done) => {
       const sourceCode = await fetchHumbleBundle()
 
       expect(sourceCode).toEqual(expect.any(String))
+      done()
     }, 10 * 1000)
   })
 
